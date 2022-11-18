@@ -1,6 +1,6 @@
 # Aliddns-Ros
 1、阿里云DDNS转发服务  
-    自行编译并运行
+&emsp;&ensp;自行编译并运行，也可以用我编译好的
 
 2、ROS路由脚本如下：  
 #xxxx处替换为需要解析的域名AccessKeyID  
