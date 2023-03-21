@@ -1,8 +1,12 @@
 # 一、部署方式
 支持服务器部署及Docker容器部署两种方式
+---
 ## 1.1、服务器部署
     *自行编译并运行；   
-    *使用已编译好的Release版本；
+    *使用已编译好的Release版本；    
+## 1.2、Docker容器部署
+Docker镜像：[Docker Hub](https://hub.docker.com/r/lsprain/aliddns).  
+---
 # 二、RouterOS7.x 脚本代码
 ROS路由脚本如下：  
 ```
@@ -57,5 +61,4 @@ ROS路由脚本如下：
 }  
 ```
 
-# 三、Docker容器部署
-Docker镜像：[Docker Hub](https://hub.docker.com/r/lsprain/aliddns).  
+
