@@ -1,29 +1,30 @@
 # 一、部署方式
 支持服务器部署及Docker容器部署两种方式
 ## 1.1、服务器部署
-&emsp;&ensp;>自行编译并运行；   
-&emsp;&ensp;使用已编译好的Release版本；
+    自行编译并运行；   
+    使用已编译好的Release版本；
 # 一、RouterOS7.x 脚本代码
 1、阿里云DDNS转发服务  
 &emsp;&ensp;自行编译并运行，也可以用我编译好的
 
 2、ROS路由脚本如下：  
+```
 #xxxx处替换为需要解析的域名AccessKeyID  
-:local AccessKeyID "`xxxx`"   
+:local AccessKeyID "xxxx"  
 #xxxx处替换为需要解析的域名AccessKeySecret  
-:local AccessKeySecret "`xxxx`"   
+:local AccessKeySecret "xxxx"   
 #xxxx处替换为需要解析的域名，如baidu.com  
-:local DomainName "`lsprain.xxxx`"  
+:local DomainName "lsprain.xxxx"  
 #xxxx处替换为需要解析的子域名，如home.baidu.com只需要填home即可   
-:local RR "`home`"   
+:local RR "home"   
 #xxxx处替换为网络出口名称，如pppoe-out1  
-:local pppoe "`pppoe-out1`"   
+:local pppoe "pppoe-out1"   
 
 :local IpAddr [/ip address get [/ip address find interface=$pppoe] address]  
 :set IpAddr [:pick $IpAddr 0 ([len $IpAddr] -3)]  
 :log warning "当前公网IP地址：$IpAddr"  
 
-:local aliddns "http://`服务地址`:8800/aliddns?AccessKeyID=$AccessKeyID&AccessKeySecret=$AccessKeySecret&RR=$RR&DomainName=$DomainName&IpAddr=$IpAddr"  
+:local aliddns "http://服务地址:8800/aliddns?AccessKeyID=$AccessKeyID&AccessKeySecret=$AccessKeySecret&RR=$RR&DomainName=$DomainName&IpAddr=$IpAddr"  
 
 :local result [/tool fetch url=("$aliddns") mode=http http-method=get as-value output=user];  
 #:log warning $result  
@@ -57,8 +58,7 @@
 }  
 }  
 }  
-
+```
 
 # 二、Docker容器部署
-Docker镜像：[Docker Hub]([https://pages.github.com/](https://hub.docker.com/r/lsprain/aliddns)).  
-docker run -d --name aliddns --restart always -p 8800:8800 lsprain/aliddns
+Docker镜像：[Docker Hub](https://hub.docker.com/r/lsprain/aliddns).  
