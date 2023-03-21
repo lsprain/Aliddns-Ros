@@ -1,4 +1,9 @@
-# Aliddns-Ros
+# 一、部署方式
+支持服务器部署及Docker容器部署两种方式
+## 1.1、服务器部署
+&emsp;&ensp;>自行编译并运行；   
+&emsp;&ensp;使用已编译好的Release版本；
+# 一、RouterOS7.x 脚本代码
 1、阿里云DDNS转发服务  
 &emsp;&ensp;自行编译并运行，也可以用我编译好的
 
@@ -54,5 +59,6 @@
 }  
 
 
-二、Docker容器部署
+# 二、Docker容器部署
+Docker镜像：[Docker Hub]([https://pages.github.com/](https://hub.docker.com/r/lsprain/aliddns)).  
 docker run -d --name aliddns --restart always -p 8800:8800 lsprain/aliddns
