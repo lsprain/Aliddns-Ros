@@ -1,13 +1,10 @@
 # 一、部署方式
 支持服务器部署及Docker容器部署两种方式
 ## 1.1、服务器部署
-    自行编译并运行；   
-    使用已编译好的Release版本；
-# 一、RouterOS7.x 脚本代码
-1、阿里云DDNS转发服务  
-&emsp;&ensp;自行编译并运行，也可以用我编译好的
-
-2、ROS路由脚本如下：  
+    *自行编译并运行；   
+    *使用已编译好的Release版本；
+# 二、RouterOS7.x 脚本代码
+ROS路由脚本如下：  
 ```
 #xxxx处替换为需要解析的域名AccessKeyID  
 :local AccessKeyID "xxxx"  
@@ -60,5 +57,5 @@
 }  
 ```
 
-# 二、Docker容器部署
+# 三、Docker容器部署
 Docker镜像：[Docker Hub](https://hub.docker.com/r/lsprain/aliddns).  
