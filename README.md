@@ -52,3 +52,7 @@
 }  
 }  
 }  
+
+
+二、Docker容器部署
+docker run -d --name aliddns --restart always -p 8800:8800 lsprain/aliddns
