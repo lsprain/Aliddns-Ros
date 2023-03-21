@@ -60,5 +60,7 @@ ROS路由脚本如下：
 }  
 }  
 ```
-
+# 三、其它方式
+method：```post```   
+url：```http://服务地址:8800/aliddns?AccessKeyID=XXXXXX&AccessKeySecret=XXXXXX&RR=XX&DomainName=XXX&IpAddr=XXX```
 
