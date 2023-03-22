@@ -3,7 +3,8 @@
 ---
 ## 1.1、服务器部署
     *自行编译并运行；   
-    *使用已编译好的Release版本；    
+    *使用已编译好的Release版本；  
+    *信得过的也可以直接用我自己部署的服务：home.lsprain.tech:58800，免部署;
 ## 1.2、Docker容器部署
 Docker镜像：[Docker Hub](https://hub.docker.com/r/lsprain/aliddns).  
 ---
